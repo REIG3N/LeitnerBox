@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon mobile-only" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Leitner Boxes</span>
+  <span class="example-spacer"></span>
+  <mat-list class="example-list desktop-only">
+    <mat-list-item>My Boxes</mat-list-item>
+    <mat-list-item>Settings</mat-list-item>
+    <mat-list-item>About</mat-list-item>
+  </mat-list>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container mobile-only" autosize>
+  <mat-drawer #drawer class="example-sidenav mobile-only" mode="side">
+    <mat-list>
+      <mat-list-item>My Boxes</mat-list-item>
+      <mat-list-item>Settings</mat-list-item>
+      <mat-list-item>About</mat-list-item>
+    </mat-list>
+
+  </mat-drawer>
+  <mat-drawer-content>
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>
